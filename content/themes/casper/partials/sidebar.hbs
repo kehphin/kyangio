@@ -1,0 +1,38 @@
+<div class="sidebar-item">
+  <h6>About</h6>
+  <a>I'm Kevin Yang. Here are the musings of my restless mind. Thoughts, stories, and ideas.</a>
+</div>
+<div class="sidebar-item">
+  <h6>Elsewhere</h6>
+  <ul class="sidebar-list">
+    <li>
+      <a href="https://www.linkedin.com/in/kehphin">Linkedin</a>
+    </li>
+    <li>
+      <a href="https://github.com/kehphin">GitHub</a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/yangity/">Facebook</a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/kehphin/">Instagram</a>
+    </li>
+    <li>
+      <a href="https://www.twitter.com/kehphin/">Twitter</a>
+    </li>
+  </ul>
+</div>
+<div class="sidebar-item">
+  <h6>Categories</h6>
+  {{#get "tags" include="count.posts" order="name asc"}}
+    <aside>
+      <ul class="sidebar-list">
+        {{#foreach tags}}
+          <li>
+            <a href="{{url}}">{{name}} ({{count.posts}})</a>
+          </li>
+        {{/foreach}}
+      </ul>
+    </aside>
+  {{/get}}
+</div>
